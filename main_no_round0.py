@@ -274,6 +274,11 @@ def display_and_click_relative_position(window_title):
     except KeyboardInterrupt:
         print("\n程序結束")
 def round1():
+    window_pos = get_window_position(WINDOW_TITLE)
+    if not window_pos:
+        print(f"找不到視窗 '{WINDOW_TITLE}'，略過 round1")
+        return False
+
     time.sleep(random.randint(3, 5))
     while(1):
         re_OK = get_text_from_game_region(window_pos[0], window_pos[1],107,323,490-323,140-107)
