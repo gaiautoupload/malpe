@@ -780,13 +780,6 @@ def round1():
     pyautogui.mouseDown()
     pyautogui.click()
     #課題-確認
-    random_x_offset = random.randint(348, 455)
-    random_y_offset = random.randint(350, 379)
-    start_abs_x = window_pos[0] + random_x_offset
-    start_abs_y = window_pos[1] + random_y_offset
-    pyautogui.moveTo(start_abs_x, start_abs_y, duration=random.randint(1, 3))
-    pyautogui.mouseDown()
-    pyautogui.click()
     # 升等後可能跳出廣告：最多檢查 5 秒。
     # 找到後會點擊指定位置並按 ESC，接著繼續原本的課題流程。
     ad_check_deadline = time.time() + 5
@@ -809,6 +802,14 @@ def round1():
 
         time.sleep(0.5)
     #課題-全部領取
+    # Confirm only after advertisement detection and handling.
+    random_x_offset = random.randint(348, 455)
+    random_y_offset = random.randint(350, 379)
+    start_abs_x = window_pos[0] + random_x_offset
+    start_abs_y = window_pos[1] + random_y_offset
+    pyautogui.moveTo(start_abs_x, start_abs_y, duration=random.randint(1, 3))
+    pyautogui.mouseDown()
+    pyautogui.click()
     random_x_offset = random.randint(722, 730)
     random_y_offset = random.randint(450, 469)
     start_abs_x = window_pos[0] + random_x_offset
@@ -817,13 +818,6 @@ def round1():
     pyautogui.mouseDown()
     pyautogui.click()
     #課題-確認2
-    random_x_offset = random.randint(348, 455)
-    random_y_offset = random.randint(319, 343)
-    start_abs_x = window_pos[0] + random_x_offset
-    start_abs_y = window_pos[1] + random_y_offset
-    pyautogui.moveTo(start_abs_x, start_abs_y, duration=random.randint(1, 3))
-    pyautogui.mouseDown()
-    pyautogui.click()
     # 升等後可能跳出廣告：最多檢查 5 秒。
     # 找到後會點擊指定位置並按 ESC，接著繼續原本的課題流程。
     ad_check_deadline = time.time() + 5
@@ -846,6 +840,14 @@ def round1():
 
         time.sleep(0.5)
     #課題-X
+    # Confirm the second action only after advertisement detection and handling.
+    random_x_offset = random.randint(348, 455)
+    random_y_offset = random.randint(319, 343)
+    start_abs_x = window_pos[0] + random_x_offset
+    start_abs_y = window_pos[1] + random_y_offset
+    pyautogui.moveTo(start_abs_x, start_abs_y, duration=random.randint(1, 3))
+    pyautogui.mouseDown()
+    pyautogui.click()
     random_x_offset = random.randint(780, 786)
     random_y_offset = random.randint(61, 73)
     start_abs_x = window_pos[0] + random_x_offset
@@ -1570,13 +1572,6 @@ def round0():
     pyautogui.mouseDown()
     pyautogui.click()
     #課題-確認
-    random_x_offset = random.randint(348, 455)
-    random_y_offset = random.randint(350, 379)
-    start_abs_x = window_pos[0] + random_x_offset
-    start_abs_y = window_pos[1] + random_y_offset
-    pyautogui.moveTo(start_abs_x, start_abs_y, duration=random.randint(1, 3))
-    pyautogui.mouseDown()
-    pyautogui.click()
     ad_check_deadline = time.time() + 5
     while time.time() < ad_check_deadline:
         rect = get_window_rect(WINDOW_TITLE)
@@ -1597,6 +1592,14 @@ def round0():
 
         time.sleep(0.5)
     #課題-全部領取
+    # Confirm only after advertisement detection and handling.
+    random_x_offset = random.randint(348, 455)
+    random_y_offset = random.randint(350, 379)
+    start_abs_x = window_pos[0] + random_x_offset
+    start_abs_y = window_pos[1] + random_y_offset
+    pyautogui.moveTo(start_abs_x, start_abs_y, duration=random.randint(1, 3))
+    pyautogui.mouseDown()
+    pyautogui.click()
     random_x_offset = random.randint(722, 730)
     random_y_offset = random.randint(450, 469)
     start_abs_x = window_pos[0] + random_x_offset
@@ -1605,13 +1608,6 @@ def round0():
     pyautogui.mouseDown()
     pyautogui.click()
     #課題-確認2
-    random_x_offset = random.randint(348, 455)
-    random_y_offset = random.randint(319, 343)
-    start_abs_x = window_pos[0] + random_x_offset
-    start_abs_y = window_pos[1] + random_y_offset
-    pyautogui.moveTo(start_abs_x, start_abs_y, duration=random.randint(1, 3))
-    pyautogui.mouseDown()
-    pyautogui.click()
     ad_check_deadline = time.time() + 5
     while time.time() < ad_check_deadline:
         rect = get_window_rect(WINDOW_TITLE)
@@ -1632,6 +1628,14 @@ def round0():
 
         time.sleep(0.5)
     #課題-X
+    # Confirm the second action only after advertisement detection and handling.
+    random_x_offset = random.randint(348, 455)
+    random_y_offset = random.randint(319, 343)
+    start_abs_x = window_pos[0] + random_x_offset
+    start_abs_y = window_pos[1] + random_y_offset
+    pyautogui.moveTo(start_abs_x, start_abs_y, duration=random.randint(1, 3))
+    pyautogui.mouseDown()
+    pyautogui.click()
     random_x_offset = random.randint(780, 786)
     random_y_offset = random.randint(61, 73)
     start_abs_x = window_pos[0] + random_x_offset
