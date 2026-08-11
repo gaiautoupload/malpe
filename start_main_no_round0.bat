@@ -1,0 +1,2 @@
+python main_no_round0.py
+pause

@@ -1,0 +1,4 @@
+__pycache__/
+*.py[cod]
+*.log
+ad_image/script_log.txt
