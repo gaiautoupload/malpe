@@ -1,0 +1,7 @@
+mss
+numpy
+opencv-python
+Pillow
+PyAutoGUI
+PyGetWindow
+pytesseract
