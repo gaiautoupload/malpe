@@ -857,6 +857,11 @@ def round1():
     pyautogui.mouseDown()
     pyautogui.click()
 def round0():
+    window_pos = get_window_position(WINDOW_TITLE)
+    if not window_pos:
+        print(f"找不到視窗 '{WINDOW_TITLE}'，略過 round0")
+        return False
+
     now = datetime.datetime.now()
 
     # if 1<0:
