@@ -48,12 +48,6 @@ if /I "%~1"=="/dry-run" (
     goto :success
 )
 
-choice /C YN /N /M "[Ads] Publish these changes to origin/main? [Y/N]: "
-if errorlevel 2 (
-    echo [Ads] Cancelled.
-    goto :success
-)
-
 git config user.name >nul 2>&1
 if errorlevel 1 (
     echo [Ads] Git user.name is not configured.
@@ -111,7 +105,6 @@ echo [Ads] Other computers will download them on their next launch.
 
 :success
 popd >nul 2>&1
-if /I not "%~1"=="/dry-run" pause
 exit /b 0
 
 :failed
