@@ -144,8 +144,8 @@ VALID_EXTENSIONS = ('.png', '.jpg', '.jpeg', '.bmp')
 # --- 升等廣告設定 ---
 AD_CONFIG_2 = {
     "folder": os.path.join(os.path.dirname(os.path.abspath(__file__)), "ad_image2"),
-    "offset_x": 719,
-    "offset_y": 89
+    "offset_x": 672,
+    "offset_y": 127
 }
 # =========================================
 
