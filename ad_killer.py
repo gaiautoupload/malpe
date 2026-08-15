@@ -23,8 +23,8 @@ AD_CONFIG_1 = {
 # --- 廣告設定 2 (新增的) ---
 AD_CONFIG_2 = {
     "folder": "ad_image2",
-    "offset_x": 719,
-    "offset_y": 89
+    "offset_x": 672,
+    "offset_y": 127
 }
 # =========================================
 
