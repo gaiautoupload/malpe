@@ -191,14 +191,36 @@ def process_ad_group(win_x, win_y, search_region, config):
     if not image_list:
         return False
 
+    # Capture the requested window on every monitor before matching.
+    region_x, region_y, region_width, region_height = search_region
+    try:
+        screen_capture = ImageGrab.grab(
+            bbox=(
+                region_x,
+                region_y,
+                region_x + region_width,
+                region_y + region_height,
+            ),
+            all_screens=True,
+        )
+    except Exception as e:
+        print(f"無法擷取遊戲視窗進行廣告辨識: {e}")
+        return False
+
     # 掃描該組圖片
     for img_path in image_list:
         try:
             # 搜尋圖片
-            location = pyautogui.locateOnScreen(img_path, region=search_region, confidence=0.8, grayscale=True)
+            location = pyautogui.locate(
+                img_path,
+                screen_capture,
+                confidence=0.8,
+                grayscale=True,
+            )
         except pyautogui.ImageNotFoundException:
             location = None
-        except Exception:
+        except Exception as e:
+            print(f"廣告圖片比對失敗 ({img_path}): {e}")
             location = None
 
         if location:
