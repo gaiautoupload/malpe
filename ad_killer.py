@@ -3,7 +3,7 @@ import pygetwindow as gw
 import time
 import os
 import traceback
-from PIL import ImageGrab
+from PIL import Image, ImageGrab
 
 # 防止滑鼠移到角落時觸發錯誤
 pyautogui.FAILSAFE = False
@@ -91,8 +91,10 @@ def process_ad_group(win_x, win_y, search_region, config):
     for img_path in image_list:
         try:
             # 搜尋圖片
+            with Image.open(img_path) as image_file:
+                needle_image = image_file.convert("RGB")
             location = pyautogui.locate(
-                img_path,
+                needle_image,
                 screen_capture,
                 confidence=0.8,
                 grayscale=True,
