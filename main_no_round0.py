@@ -8,6 +8,7 @@ import mss
 import cv2
 import os
 import pytesseract
+from PIL import Image
 from PIL import ImageGrab  # 或使用 pyautogui
 import numpy as np
 # 若在 Windows，要設定 Tesseract 的路徑
@@ -211,8 +212,10 @@ def process_ad_group(win_x, win_y, search_region, config):
     for img_path in image_list:
         try:
             # 搜尋圖片
+            with Image.open(img_path) as image_file:
+                needle_image = image_file.convert("RGB")
             location = pyautogui.locate(
-                img_path,
+                needle_image,
                 screen_capture,
                 confidence=0.8,
                 grayscale=True,
