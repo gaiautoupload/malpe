@@ -1381,8 +1381,8 @@ def round0():
 
     # time.sleep(random.randint(1, 3))
     #每日地城2
-    random_x_offset = random.randint(43, 104)
-    random_y_offset = random.randint(290, 311)
+    random_x_offset = random.randint(86, 104)
+    random_y_offset = random.randint(177, 195)
     start_abs_x = window_pos[0] + random_x_offset
     start_abs_y = window_pos[1] + random_y_offset
     pyautogui.moveTo(start_abs_x, start_abs_y, duration=random.randint(1, 3))
@@ -1400,7 +1400,7 @@ def round0():
     # time.sleep(random.randint(3, 5))
     #每日地城2-確認
     random_x_offset = random.randint(449, 528)
-    random_y_offset = random.randint(437, 461)
+    random_y_offset = random.randint(369, 383)
     start_abs_x = window_pos[0] + random_x_offset
     start_abs_y = window_pos[1] + random_y_offset
     pyautogui.moveTo(start_abs_x, start_abs_y, duration=random.randint(1, 3))
