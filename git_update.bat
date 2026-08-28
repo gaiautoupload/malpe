@@ -31,11 +31,21 @@ if not defined CURRENT_BRANCH (
     goto :check_local_ads
 )
 
+rem All launcher computers must follow the shared main branch.
+set CURRENT_BRANCH=main
+
 echo [Git] Checking origin/%CURRENT_BRANCH% for updates...
 set "GIT_TERMINAL_PROMPT=0"
 git fetch --quiet origin "%CURRENT_BRANCH%"
 if errorlevel 1 (
     echo [Git] Update check failed. Starting with the local version.
+    goto :check_local_ads
+)
+
+echo [Git] Overwriting local tracked files with origin/main...
+git reset --hard origin/main
+if errorlevel 1 (
+    echo [Git] Automatic overwrite failed. Starting with the local version.
     goto :check_local_ads
 )
 
